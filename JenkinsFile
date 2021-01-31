@@ -1,1 +1,9 @@
-
+node {
+    stage ('Check SCM ') {
+        git 'https://github.com/SaumyaGali/JenkinsSample.git'
+    }
+    stage ('Build Maven'){
+        sh 'mvn clean package'
+    }
+        
+}
